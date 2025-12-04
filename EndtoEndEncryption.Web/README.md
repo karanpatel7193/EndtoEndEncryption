@@ -37,8 +37,6 @@ A secure Angular 18 application demonstrating end-to-end encryption (E2EE) for u
 - Node.js (v18 or higher)
 - npm (v9 or higher)
 - Angular CLI 18 globally installed: `npm install -g @angular/cli@18`
-- .NET 8 SDK or higher (for backend API)
-- Visual Studio 2022 or Visual Studio Code with C# extensions
 
 ## Installation & Setup
 
@@ -57,24 +55,9 @@ A secure Angular 18 application demonstrating end-to-end encryption (E2EE) for u
    - Update the API endpoint in [UserService](src/app/services/user.service.ts) if needed
    - Ensure the backend server is running on `https://localhost:44382`
 
-4. **Backend Setup**
-   - Open `EndtoEndEncryption.API.sln` in Visual Studio 2022
-   - Review `appsettings.json` for any required configurations
-   - Ensure CORS is properly configured to allow requests from `http://localhost:4200`
-
 ## Running the Application
 
-### Backend API Server
-
-#### Option 1: Run from Visual Studio 2022
-
-1. Open `EndtoEndEncryption.API.sln` in Visual Studio 2022
-2. In Solution Explorer, right-click on `EndtoEndEncryption.API` project and select **Set as Startup Project**
-3. Press `F5` to start debugging, or `Ctrl+F5` to run without debugging
-4. The API will automatically launch and be available at `https://localhost:44382`
-5. Visual Studio will open the default browser showing the Swagger UI (if configured)
-
-### Frontend Development Server
+### Development Server
 
 Run the development server with automatic reload:
 ```bash
@@ -168,7 +151,7 @@ ng serve --port 4300
 - Verify browser supports Web Crypto API (all modern browsers)
 
 ## Further Help
-- [.NET Documentation](https://learn.microsoft.com/en-us/dotnet/)
+
 - [Angular Documentation](https://angular.io)
 - [Angular CLI Documentation](https://angular.io/cli)
 - [Web Crypto API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <form #userForm="ngForm" novalidate>
+            <h4 class="text-center fw-bold mb-2">Create an account</h4>
+            <p class="text-center text-muted small mb-4">Sign up to unlock your journey with us.</p>
+
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" required
+                    [(ngModel)]="registration.email" placeholder="Email Address">
+                <label for="email">Email Address</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="username" name="username" required
+                    [(ngModel)]="registration.username" placeholder="Username">
+                <label for="username">Username</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password" required
+                    [(ngModel)]="registration.password" placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+            <button type="button" class="btn btn-primary w-100 mb-3" (click)="Save(userForm.valid ?? false)">Create
+                Account</button>
+            <div *ngIf="message" class="alert alert-info text-center" role="alert">
+                {{ message }}
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<router-outlet />
